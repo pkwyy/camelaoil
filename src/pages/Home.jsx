@@ -1,12 +1,11 @@
+import Header from "../components/Header"
+
 const Home = () => {
   return (
-    <div className="">
-      Home hefsuidh dsuijds iusahn uasdjbnadsfniasdi
-      uasfhnuiaesdfiuvneasidfvusoidfuvnjusdfvnusjdnfvuinsdeiofvoisedjfoivsdoj
-      kjnsdfjnkfs jdsfnvjoisdfv efjdsnjeiods dfjnsjioewd uineijf iudsjnfgujesd
-      uijndsuf iunjwdesuofjrn iuewdsjnfuse uijnesduoirf unesdfuioesd iuojdsfn
-      iujsadfjioiesojdfio sudfjniosfde uinsdijfo iudjsf ujdsf iujsdijf
-      uijnsdfijngvk sunijdklsfjnvp
+    <div className="max-w-screen relative overflow-x-hidden">
+      <div className="bg-white shadow-top">
+        <Header />
+      </div>
     </div>
   )
 }
