@@ -13,7 +13,11 @@ export default {
       xl: "1440px",
       "2xl": "1920px",
     },
-    extend: {},
+    extend: {
+      colors: {
+        carrotOrange: "#f4942c",
+      },
+    },
   },
   plugins: [],
 }
