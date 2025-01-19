@@ -35,7 +35,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed z-50 w-full bg-black/90 px-5 py-3 shadow transition-all duration-500 ease-in-out lg:px-10 xl:px-40`}
+      className={`fixed z-50 w-full bg-black/90 text-white px-5 py-3 shadow transition-all duration-500 ease-in-out lg:px-10 xl:px-40`}
     >
       <div className="flex flex-col items-center justify-between">
         <div className="flex w-full items-center justify-between">

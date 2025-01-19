@@ -3,23 +3,10 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light dark;
+  padding: 0;
 }
 
 body {
   margin: 0;
   display: flex;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
 }
