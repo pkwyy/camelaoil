@@ -10,6 +10,7 @@ import fattyAcid from "../assets/images/fattyAcid.jpeg"
 import palmStearine from "../assets/images/palmStearine.webp"
 import palmKernelOil from "../assets/images/palmKernelOil.jpg"
 import palmKernelCake from "../assets/images/palmKernelCake.jpeg"
+import { Link } from "react-router"
 
 const iconsTexts = [
   {
@@ -111,7 +112,7 @@ const Home = () => {
         >
           <div className="relative w-1/3 bg-black shadow">
             <div className="absolute -right-8 -top-4 flex w-fit space-x-2 bg-carrotOrange p-2 text-white">
-              <a href="/products">See All</a>
+              <Link to="/products">See All</Link>
             </div>
             <motion.div variants={itemVariants}>
               <h1 className="px-3 pt-7 font-semibold text-white sm:pt-5 sm:text-lg md:pt-4 md:text-xl lg:text-3xl">
