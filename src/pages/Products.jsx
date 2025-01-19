@@ -67,7 +67,7 @@ const Products = () => {
             animate={inView2 ? "visible" : "hidden"}
             variants={containerVariants}
             ref={setRef2}
-            className="flex flex-col gap-5 px-4 sm:px-8"
+            className="flex flex-col gap-20 px-4 sm:px-8"
           >
             <motion.div
               variants={itemVariants}
@@ -185,7 +185,7 @@ const Products = () => {
               animate={inView2 ? "visible" : "hidden"}
               variants={containerVariants}
               ref={setRef2}
-              className="my-5 flex flex-row items-center justify-center gap-3"
+              className="my-5 flex flex-row items-center justify-center gap-5"
             >
               <motion.div variants={itemVariants} className="relative">
                 <div className="size-80 rounded border border-carrotOrange p-1">
@@ -194,7 +194,7 @@ const Products = () => {
                     className="size-[310px] rounded object-cover shadow"
                   />
                 </div>
-                <div className="absolute inset-0 flex size-80 items-center justify-center bg-black bg-opacity-75 opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100">
+                <div className="absolute inset-0 flex size-80 items-center justify-center bg-black/75 opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100 hover:text-white">
                   <motion.div
                     variants={itemVariants}
                     className="w-full text-balance p-4 text-center text-desertStorm"
@@ -218,7 +218,7 @@ const Products = () => {
                     className="size-[310px] rounded object-cover shadow"
                   />
                 </div>
-                <div className="absolute inset-0 flex size-80 items-center justify-center bg-black bg-opacity-75 opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100">
+                <div className="absolute inset-0 flex size-80 items-center justify-center bg-black/75 opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100 hover:text-white">
                   <motion.div
                     variants={itemVariants}
                     className="w-full text-balance p-4 text-center text-desertStorm"
@@ -242,7 +242,7 @@ const Products = () => {
                     className="size-[310px] rounded object-cover shadow"
                   />
                 </div>
-                <div className="absolute inset-0 flex size-80 items-center justify-center bg-black bg-opacity-75 opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100">
+                <div className="absolute inset-0 flex size-80 items-center justify-center bg-black/75 opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100 hover:text-white">
                   <motion.div
                     variants={itemVariants}
                     className="w-full text-balance p-4 text-center text-desertStorm"
@@ -275,7 +275,7 @@ const Products = () => {
                     className="size-[310px] rounded object-cover shadow"
                   />
                 </div>
-                <div className="absolute inset-0 flex size-80 items-center justify-center bg-black bg-opacity-75 opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100">
+                <div className="absolute inset-0 flex size-80 items-center justify-center bg-black/75 opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100 hover:text-white">
                   <motion.div
                     variants={itemVariants}
                     className="w-full text-balance p-4 text-center text-desertStorm"
@@ -302,7 +302,7 @@ const Products = () => {
                     className="size-[310px] rounded object-cover shadow"
                   />
                 </div>
-                <div className="absolute inset-0 flex size-80 items-center justify-center bg-black bg-opacity-75 opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100">
+                <div className="absolute inset-0 flex size-80 items-center justify-center bg-black/75 opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100 hover:text-white">
                   <motion.div
                     variants={itemVariants}
                     className="w-full text-balance p-4 text-center text-desertStorm"

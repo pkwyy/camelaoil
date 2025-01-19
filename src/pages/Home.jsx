@@ -10,7 +10,7 @@ import fattyAcid from "../assets/images/fattyAcid.jpeg"
 import palmStearine from "../assets/images/palmStearine.webp"
 import palmKernelOil from "../assets/images/palmKernelOil.jpg"
 import palmKernelCake from "../assets/images/palmKernelCake.jpeg"
-import { Link } from "react-router"
+// import { Link } from "react-router"
 
 const iconsTexts = [
   {
@@ -33,7 +33,7 @@ export const headingStyles =
   "text-2xl text-center uppercase font-semibold font-crimsonText py-5"
 
 export const opaqueOverlay =
-  "flex absolute inset-0 bg-black/60 border-white border-[0.5px] shadow rounded-sm items-center justify-center w-11/12 h-5/6 md:w-2/3 md:h-2/3 m-auto px-2 md:px-20"
+  "flex absolute inset-0 bg-black/60 shadow rounded-sm items-center justify-center w-11/12 h-5/6 m-auto px-2 md:px-40 lg:px-60 xl:px-80"
 
 export const opaqueOverlayText =
   "text-white text-2xl md:text-4xl font-crimsonText text-center font-semibold"
@@ -54,7 +54,6 @@ const Home = () => {
     <div className="max-w-screen relative overflow-x-hidden">
       <div className="bg-white shadow-top">
         <Header />
-
         <motion.div
           initial="hidden"
           animate={inView1 ? "visible" : "hidden"}
@@ -65,7 +64,7 @@ const Home = () => {
           <h1 className={headingStyles}>Why choose Camela&apos;s product?</h1>
           <motion.div
             variants={containerVariants}
-            className="grid divide-y divide-carrotOrange md:grid-cols-3 md:divide-x md:divide-y-0"
+            className="grid divide-y divide-carrotOrange/50 md:grid-cols-3 md:divide-x md:divide-y-0"
           >
             {iconsTexts.map((iconText, index) => (
               <motion.div
@@ -84,7 +83,6 @@ const Home = () => {
             ))}
           </motion.div>
         </motion.div>
-
         <motion.div
           initial="hidden"
           animate={inView2 ? "visible" : "hidden"}
@@ -102,7 +100,6 @@ const Home = () => {
             </div>
           </div>
         </motion.div>
-
         <motion.div
           initial="hidden"
           animate={inView3 ? "visible" : "hidden"}
@@ -111,14 +108,9 @@ const Home = () => {
           className="relative mt-20 flex h-72 sm:h-80 md:h-96 text-white"
         >
           <div className="relative w-1/3 bg-black shadow">
-            <div className="absolute -right-8 -top-4 flex w-fit space-x-2 bg-carrotOrange p-2 text-white">
+            {/* <div className="absolute -right-8 -top-4 flex w-fit space-x-2 bg-carrotOrange p-2 text-white">
               <Link to="/products">See All</Link>
-            </div>
-            <motion.div variants={itemVariants}>
-              <h1 className="px-3 pt-7 font-semibold text-white sm:pt-5 sm:text-lg md:pt-4 md:text-xl lg:text-3xl">
-                Our Products
-              </h1>
-            </motion.div>
+            </div> */}
           </div>
           <motion.div className="sm:ml-22 absolute bottom-0 left-0 right-0 top-0 ml-10 mt-12 flex h-52 flex-col space-y-10 py-5 sm:h-60 md:my-8 md:ml-32 md:h-80 lg:ml-52 xl:ml-60">
             <motion.div
@@ -158,6 +150,7 @@ const Home = () => {
                   </div>
                 )}
               </motion.div>
+
               <motion.div
                 variants={itemVariants}
                 className="relative w-60 flex-shrink-0 snap-center rounded-md shadow-xl sm:w-96 md:w-[500px]"
@@ -286,6 +279,9 @@ const Home = () => {
               </motion.div>
             </motion.div>
           </motion.div>
+          <h1 className="font-crimsonText text-3xl p-5 md:p-2 text-black">
+            Our Products
+          </h1>
         </motion.div>
       </div>
     </div>
