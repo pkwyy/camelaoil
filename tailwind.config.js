@@ -17,6 +17,9 @@ export default {
       colors: {
         carrotOrange: "#f4942c",
       },
+      boxShadow: {
+        top: "0 -0.5px 0.5px rgba(0, 0, 0, 0.1)",
+      },
     },
   },
   plugins: [],
