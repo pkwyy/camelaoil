@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      <main className="font-afacadFlux text-black">
+      <main className="font-afacadFlux text-black bg-white">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
