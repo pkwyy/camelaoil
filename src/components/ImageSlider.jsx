@@ -11,26 +11,31 @@ const images = [
     title: 'Palm Olein',
     text: `Camela's Palm Olein is made from 100 % organic palm fruit oil. It is trans-fat and gluten-free and suitable for vegans. Our Palm Olein is vitamin A fortified and is ideal for all-purpose cooking, heat sautéing, frying, and baking.`,
     image: palmOil,
+    link: '/products#palm-oil',
   },
   {
     title: 'Fatty Acid',
     text: `At Camela, our fatty acid is of the highest grade and is highly requested for producing soap and soap-based products, personal care products, paints, and, more recently, biodiesel.`,
     image: fattyAcid,
+    link: '/products',
   },
   {
     title: 'Palm Stearine',
     text: `Our Palm Stearine is of excellent quality and can be used to formulate trans-free fats such as margarine, shortening, and vegetable ghee. It is solid at room temperature, white, and neutral in flavor.`,
     image: palmStearine,
+    link: '/products',
   },
   {
     title: 'Palm Kernel Refined Vegetable Oil',
     text: `Our palm kernel refined vegetable oil is vitamin A fortified and suitable for all-purpose cooking and frying. It is also an appropriate substitute for trans fat used in commercial baking. It has a neutral color and flavor, can be solid at room temperature, and has a sharp melting curve.`,
     image: palmKernelOil,
+    link: '/products',
   },
   {
     title: 'Palm Kernel Cake',
     text: `Besides our Palm-based products, we also cater to the market requirement for animal feed. Our PKC is very high quality and contains 23% protein and 18% fiber, making it suitable for feeding ruminants and a significant ingredient in poultry, piggery, and dairy feed.`,
     image: palmKernelCake,
+    link: '/products',
   },
 ];
 
@@ -121,7 +126,7 @@ const ImageSlider = () => {
         <div className="top left absolute flex h-full w-full justify-between">
           <button
             onClick={movePrev}
-            className="z-10 m-0 h-full w-10 bg-carrotOrange p-0 text-center text-white opacity-75 transition-all duration-300 ease-in-out hover:bg-carrotOrange hover:opacity-100 disabled:cursor-not-allowed disabled:opacity-25"
+            className="z-10 m-0 h-full w-10 bg-black p-0 text-center text-white opacity-75 backdrop-blur-md transition-all duration-300 ease-in-out hover:bg-carrotOrange hover:opacity-100 disabled:cursor-not-allowed disabled:opacity-25"
             disabled={isDisabled('prev')}
           >
             <svg
@@ -142,7 +147,7 @@ const ImageSlider = () => {
           </button>
           <button
             onClick={moveNext}
-            className="z-10 m-0 h-full w-10 bg-carrotOrange p-0 text-center text-white opacity-75 transition-all duration-300 ease-in-out hover:bg-carrotOrange hover:opacity-100 disabled:cursor-not-allowed disabled:opacity-25"
+            className="z-10 m-0 h-full w-10 bg-black p-0 text-center text-white opacity-75 transition-all duration-300 ease-in-out hover:bg-carrotOrange hover:opacity-100 disabled:cursor-not-allowed disabled:opacity-25"
             disabled={isDisabled('next')}
           >
             <svg
@@ -164,7 +169,7 @@ const ImageSlider = () => {
         </div>
         <div
           ref={carousel}
-          className="carousel-container no-scrollbar relative z-0 flex h-80 gap-3 overflow-x-scroll scroll-smooth md:h-96"
+          className="carousel-container no-scrollbar relative z-0 flex h-48 gap-3 overflow-x-scroll scroll-smooth md:h-96"
           onMouseDown={handleMouseDown}
           onMouseLeave={handleMouseLeave}
           onMouseUp={handleMouseUp}
@@ -178,7 +183,7 @@ const ImageSlider = () => {
               >
                 <a
                   href={image.link}
-                  className="z-0 block aspect-square h-full w-full bg-cover bg-left-top bg-no-repeat bg-origin-padding"
+                  className="z-0 block aspect-square h-full w-80 bg-cover bg-left-top bg-no-repeat bg-origin-padding md:w-[420px]"
                   style={{ backgroundImage: `url(${image.image || ''})` }}
                 ></a>
                 <a
@@ -190,12 +195,12 @@ const ImageSlider = () => {
                   </h3>
                   <p className="text-lg font-extralight">{image.text}</p>
                 </a>
-                <a
-                  href={image.link}
-                  className="absolute bottom-0 left-0 h-1/3 w-full bg-black/70 text-xl text-white backdrop-blur-md md:hidden"
+                <Link
+                  to={image.link}
+                  className="absolute bottom-0 left-0 flex h-1/3 w-full items-center justify-center bg-black/70 text-xl text-white backdrop-blur-md md:hidden"
                 >
                   {image.title}
-                </a>
+                </Link>
               </div>
             );
           })}

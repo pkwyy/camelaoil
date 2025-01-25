@@ -1,24 +1,24 @@
-import banner2 from "../assets/images/banner2.jpg"
-import { containerVariants, itemVariants } from "../utils/variants"
-import { miniBanners, pastelCardHeadings } from "./Home"
-import { motion } from "motion/react"
-import palmOil from "../assets/images/palmOil.jpg"
-import fattyAcid from "../assets/images/fattyAcid.jpeg"
-import palmStearine from "../assets/images/palmStearine.webp"
-import palmKernelOil from "../assets/images/palmKernelOil.jpg"
-import palmKernelCake from "../assets/images/palmKernelCake.jpeg"
-import twMerge from "../utils/twMerge"
-import { useMediaQuery } from "react-responsive"
-import useInView from "../hooks/useInView"
+import banner2 from '../assets/images/banner2.jpg';
+import { containerVariants, itemVariants } from '../utils/variants';
+import { miniBanners, pastelCardHeadings } from './Home';
+import { motion } from 'motion/react';
+import palmOil from '../assets/images/palmOil.jpg';
+import fattyAcid from '../assets/images/fattyAcid.jpeg';
+import palmStearine from '../assets/images/palmStearine.webp';
+import palmKernelOil from '../assets/images/palmKernelOil.jpg';
+import palmKernelCake from '../assets/images/palmKernelCake.jpeg';
+import twMerge from '../utils/twMerge';
+import { useMediaQuery } from 'react-responsive';
+import useInView from '../hooks/useInView';
 
 const Products = () => {
-  const [setRef1, inView1] = useInView({ threshold: 0.1 })
-  const [setRef2, inView2] = useInView({ threshold: 0.1 })
-  const [setRef3, inView3] = useInView({ threshold: 0.1 })
+  const [setRef1, inView1] = useInView({ threshold: 0.1 });
+  const [setRef2, inView2] = useInView({ threshold: 0.1 });
+  const [setRef3, inView3] = useInView({ threshold: 0.1 });
 
   const mobileScreens = useMediaQuery({
     maxWidth: 1023,
-  })
+  });
 
   return (
     <div className="max-w-screen relative overflow-x-hidden">
@@ -28,14 +28,14 @@ const Products = () => {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to right, rgba(54, 85, 55, 0.1), rgba(0, 0, 0, 1))",
+              'linear-gradient(to right, rgba(54, 85, 55, 0.1), rgba(0, 0, 0, 1))',
           }}
         ></div>
       </div>
       <div className="my-10">
         <motion.div
           initial="hidden"
-          animate={inView1 ? "visible" : "hidden"}
+          animate={inView1 ? 'visible' : 'hidden'}
           variants={containerVariants}
           ref={setRef1}
         >
@@ -48,14 +48,14 @@ const Products = () => {
             </h1>
             <br />
             <p>
-              We offer{" "}
-              <span className="font-semibold">100% Organic vegetable oil</span>{" "}
+              We offer{' '}
+              <span className="font-semibold">100% Organic vegetable oil</span>{' '}
               and palm by-products crafted from 31 years of experience. In the
-              production process, we endeavor to remember that{" "}
+              production process, we endeavor to remember that{' '}
               <span className="font-semibold">
                 satisfying the discerning nutritional needs
-              </span>{" "}
-              of our growing valued customers is of{" "}
+              </span>{' '}
+              of our growing valued customers is of{' '}
               <span className="font-semibold">utmost importance.</span>
             </p>
           </motion.div>
@@ -63,8 +63,9 @@ const Products = () => {
 
         {mobileScreens ? (
           <motion.div
+            id="palm-oil"
             initial="hidden"
-            animate={inView2 ? "visible" : "hidden"}
+            animate={inView2 ? 'visible' : 'hidden'}
             variants={containerVariants}
             ref={setRef2}
             className="flex flex-col gap-20 px-4 sm:px-8"
@@ -182,7 +183,7 @@ const Products = () => {
           <>
             <motion.div
               initial="hidden"
-              animate={inView2 ? "visible" : "hidden"}
+              animate={inView2 ? 'visible' : 'hidden'}
               variants={containerVariants}
               ref={setRef2}
               className="my-5 flex flex-row items-center justify-center gap-5"
@@ -194,10 +195,10 @@ const Products = () => {
                     className="size-[310px] rounded object-cover shadow"
                   />
                 </div>
-                <div className="absolute inset-0 flex size-80 items-center justify-center bg-black/75 opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100 hover:text-white">
+                <div className="absolute inset-0 flex size-80 items-center justify-center bg-black/75 opacity-0 transition-opacity duration-300 ease-in-out hover:text-white hover:opacity-100">
                   <motion.div
                     variants={itemVariants}
-                    className="w-full text-balance p-4 text-center text-desertStorm"
+                    className="text-desertStorm w-full text-balance p-4 text-center"
                   >
                     <h1 className={twMerge(pastelCardHeadings)}>Palm Olein</h1>
                     <p className="text-balance">
@@ -218,10 +219,10 @@ const Products = () => {
                     className="size-[310px] rounded object-cover shadow"
                   />
                 </div>
-                <div className="absolute inset-0 flex size-80 items-center justify-center bg-black/75 opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100 hover:text-white">
+                <div className="absolute inset-0 flex size-80 items-center justify-center bg-black/75 opacity-0 transition-opacity duration-300 ease-in-out hover:text-white hover:opacity-100">
                   <motion.div
                     variants={itemVariants}
-                    className="w-full text-balance p-4 text-center text-desertStorm"
+                    className="text-desertStorm w-full text-balance p-4 text-center"
                   >
                     <h1 className={twMerge(pastelCardHeadings)}>Fatty Acid</h1>
                     <p className="text-balance">
@@ -242,10 +243,10 @@ const Products = () => {
                     className="size-[310px] rounded object-cover shadow"
                   />
                 </div>
-                <div className="absolute inset-0 flex size-80 items-center justify-center bg-black/75 opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100 hover:text-white">
+                <div className="absolute inset-0 flex size-80 items-center justify-center bg-black/75 opacity-0 transition-opacity duration-300 ease-in-out hover:text-white hover:opacity-100">
                   <motion.div
                     variants={itemVariants}
-                    className="w-full text-balance p-4 text-center text-desertStorm"
+                    className="text-desertStorm w-full text-balance p-4 text-center"
                   >
                     <h1 className={twMerge(pastelCardHeadings)}>
                       Palm Stearine
@@ -263,7 +264,7 @@ const Products = () => {
 
             <motion.div
               initial="hidden"
-              animate={inView3 ? "visible" : "hidden"}
+              animate={inView3 ? 'visible' : 'hidden'}
               variants={containerVariants}
               ref={setRef3}
               className="flex-row items-center justify-center gap-5 lg:flex"
@@ -275,10 +276,10 @@ const Products = () => {
                     className="size-[310px] rounded object-cover shadow"
                   />
                 </div>
-                <div className="absolute inset-0 flex size-80 items-center justify-center bg-black/75 opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100 hover:text-white">
+                <div className="absolute inset-0 flex size-80 items-center justify-center bg-black/75 opacity-0 transition-opacity duration-300 ease-in-out hover:text-white hover:opacity-100">
                   <motion.div
                     variants={itemVariants}
-                    className="w-full text-balance p-4 text-center text-desertStorm"
+                    className="text-desertStorm w-full text-balance p-4 text-center"
                   >
                     <h1 className={twMerge(pastelCardHeadings)}>
                       Palm kernel refined vegetable oil
@@ -302,10 +303,10 @@ const Products = () => {
                     className="size-[310px] rounded object-cover shadow"
                   />
                 </div>
-                <div className="absolute inset-0 flex size-80 items-center justify-center bg-black/75 opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100 hover:text-white">
+                <div className="absolute inset-0 flex size-80 items-center justify-center bg-black/75 opacity-0 transition-opacity duration-300 ease-in-out hover:text-white hover:opacity-100">
                   <motion.div
                     variants={itemVariants}
-                    className="w-full text-balance p-4 text-center text-desertStorm"
+                    className="text-desertStorm w-full text-balance p-4 text-center"
                   >
                     <h1 className={twMerge(pastelCardHeadings)}>
                       Palm kernel cake
@@ -325,7 +326,7 @@ const Products = () => {
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Products
+export default Products;
