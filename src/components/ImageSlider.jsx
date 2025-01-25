@@ -5,6 +5,9 @@ import palmKernelOil from '../assets/images/palmKernelOil.jpg';
 import palmKernelCake from '../assets/images/palmKernelCake.jpeg';
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router';
+import { motion } from 'motion/react';
+import useInView from '../hooks/useInView';
+import { containerVariants, itemVariants } from '../utils/variants';
 
 const images = [
   {
@@ -40,6 +43,7 @@ const images = [
 ];
 
 const ImageSlider = () => {
+  const [setRef1, inView1] = useInView({ threshold: 0.1 });
   const maxScrollWidth = useRef(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const carousel = useRef(null);
@@ -112,7 +116,13 @@ const ImageSlider = () => {
   };
 
   return (
-    <div className="carousel">
+    <motion.div
+      className="carousel"
+      initial="hidden"
+      animate={inView1 ? 'visible' : 'hidden'}
+      variants={containerVariants}
+      ref={setRef1}
+    >
       <div className="flex w-fit flex-col p-5">
         <h2 className="text-4xl font-semibold">Our Products</h2>
         <Link
@@ -167,7 +177,8 @@ const ImageSlider = () => {
             <span className="sr-only">Next</span>
           </button>
         </div>
-        <div
+        <motion.div
+          variants={itemVariants}
           ref={carousel}
           className="carousel-container no-scrollbar relative z-0 flex h-48 gap-3 overflow-x-scroll scroll-smooth md:h-96"
           onMouseDown={handleMouseDown}
@@ -204,9 +215,9 @@ const ImageSlider = () => {
               </div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
