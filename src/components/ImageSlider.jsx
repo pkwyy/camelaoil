@@ -4,6 +4,7 @@ import palmStearine from '../assets/images/palmStearine.webp';
 import palmKernelOil from '../assets/images/palmKernelOil.jpg';
 import palmKernelCake from '../assets/images/palmKernelCake.jpeg';
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router';
 
 const images = [
   {
@@ -109,7 +110,9 @@ const ImageSlider = () => {
     <div className="carousel">
       <div className="p-5">
         <h2 className="text-4xl font-semibold">Our Products</h2>
-        <p className="text-carrotOrange">See all</p>
+        <Link to="/products" className="text-carrotOrange">
+          See all
+        </Link>
       </div>
       <div className="relative overflow-hidden">
         <div className="top left absolute flex h-full w-full justify-between">
