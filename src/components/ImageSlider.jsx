@@ -108,9 +108,12 @@ const ImageSlider = () => {
 
   return (
     <div className="carousel">
-      <div className="p-5">
+      <div className="flex w-fit flex-col p-5">
         <h2 className="text-4xl font-semibold">Our Products</h2>
-        <Link to="/products" className="text-carrotOrange">
+        <Link
+          to="/products"
+          className="transform text-right font-crimsonText text-xl italic text-carrotOrange transition-transform duration-300 ease-in-out hover:scale-105"
+        >
           See all
         </Link>
       </div>
