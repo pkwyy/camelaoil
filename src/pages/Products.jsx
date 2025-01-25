@@ -63,7 +63,6 @@ const Products = () => {
 
         {mobileScreens ? (
           <motion.div
-            id="palm-oil"
             initial="hidden"
             animate={inView2 ? 'visible' : 'hidden'}
             variants={containerVariants}
@@ -71,6 +70,7 @@ const Products = () => {
             className="flex flex-col gap-20 px-4 sm:px-8"
           >
             <motion.div
+              id="palm-oil"
               variants={itemVariants}
               className="flex flex-col items-center justify-center gap-3 md:flex-row"
             >
@@ -89,6 +89,7 @@ const Products = () => {
             </motion.div>
 
             <motion.div
+              id="fatty-acid"
               variants={itemVariants}
               className="flex flex-col items-center justify-center gap-3 md:flex-row-reverse"
             >
@@ -109,6 +110,7 @@ const Products = () => {
             </motion.div>
 
             <motion.div
+              id="palm-stearine"
               variants={itemVariants}
               className="flex flex-col items-center justify-center gap-3 md:flex-row"
             >
@@ -132,6 +134,7 @@ const Products = () => {
             </motion.div>
 
             <motion.div
+              id="palm-kernel-oil"
               variants={itemVariants}
               className="flex flex-col items-center justify-center gap-3 md:flex-row-reverse"
             >
@@ -156,6 +159,7 @@ const Products = () => {
             </motion.div>
 
             <motion.div
+              id="palm-kernel-cake"
               variants={itemVariants}
               className="flex flex-col items-center justify-center gap-3 md:flex-row"
             >
@@ -197,6 +201,7 @@ const Products = () => {
                 </div>
                 <div className="absolute inset-0 flex size-80 items-center justify-center bg-black/75 opacity-0 transition-opacity duration-300 ease-in-out hover:text-white hover:opacity-100">
                   <motion.div
+                    id="palm-oil"
                     variants={itemVariants}
                     className="text-desertStorm w-full text-balance p-4 text-center"
                   >
@@ -221,6 +226,7 @@ const Products = () => {
                 </div>
                 <div className="absolute inset-0 flex size-80 items-center justify-center bg-black/75 opacity-0 transition-opacity duration-300 ease-in-out hover:text-white hover:opacity-100">
                   <motion.div
+                    id="fatty-acid"
                     variants={itemVariants}
                     className="text-desertStorm w-full text-balance p-4 text-center"
                   >
@@ -245,6 +251,7 @@ const Products = () => {
                 </div>
                 <div className="absolute inset-0 flex size-80 items-center justify-center bg-black/75 opacity-0 transition-opacity duration-300 ease-in-out hover:text-white hover:opacity-100">
                   <motion.div
+                    id="palm-stearine"
                     variants={itemVariants}
                     className="text-desertStorm w-full text-balance p-4 text-center"
                   >
@@ -278,6 +285,7 @@ const Products = () => {
                 </div>
                 <div className="absolute inset-0 flex size-80 items-center justify-center bg-black/75 opacity-0 transition-opacity duration-300 ease-in-out hover:text-white hover:opacity-100">
                   <motion.div
+                    id="palm-kernel-oil"
                     variants={itemVariants}
                     className="text-desertStorm w-full text-balance p-4 text-center"
                   >
@@ -305,6 +313,7 @@ const Products = () => {
                 </div>
                 <div className="absolute inset-0 flex size-80 items-center justify-center bg-black/75 opacity-0 transition-opacity duration-300 ease-in-out hover:text-white hover:opacity-100">
                   <motion.div
+                    id="palm-kernel-cake"
                     variants={itemVariants}
                     className="text-desertStorm w-full text-balance p-4 text-center"
                   >

@@ -20,25 +20,25 @@ const images = [
     title: 'Fatty Acid',
     text: `At Camela, our fatty acid is of the highest grade and is highly requested for producing soap and soap-based products, personal care products, paints, and, more recently, biodiesel.`,
     image: fattyAcid,
-    link: '/products',
+    link: '/products#fatty-acid',
   },
   {
     title: 'Palm Stearine',
     text: `Our Palm Stearine is of excellent quality and can be used to formulate trans-free fats such as margarine, shortening, and vegetable ghee. It is solid at room temperature, white, and neutral in flavor.`,
     image: palmStearine,
-    link: '/products',
+    link: '/products#palm-stearine',
   },
   {
     title: 'Palm Kernel Refined Vegetable Oil',
     text: `Our palm kernel refined vegetable oil is vitamin A fortified and suitable for all-purpose cooking and frying. It is also an appropriate substitute for trans fat used in commercial baking. It has a neutral color and flavor, can be solid at room temperature, and has a sharp melting curve.`,
     image: palmKernelOil,
-    link: '/products',
+    link: '/products#palm-kernel-oil',
   },
   {
     title: 'Palm Kernel Cake',
     text: `Besides our Palm-based products, we also cater to the market requirement for animal feed. Our PKC is very high quality and contains 23% protein and 18% fiber, making it suitable for feeding ruminants and a significant ingredient in poultry, piggery, and dairy feed.`,
     image: palmKernelCake,
-    link: '/products',
+    link: '/products#palm-kernel-cake',
   },
 ];
 
@@ -197,15 +197,15 @@ const ImageSlider = () => {
                   className="z-0 block aspect-square h-full w-80 bg-cover bg-left-top bg-no-repeat bg-origin-padding md:w-[420px]"
                   style={{ backgroundImage: `url(${image.image || ''})` }}
                 ></a>
-                <a
-                  href={image.link}
+                <Link
+                  to={image.link}
                   className="left-0 top-0 z-10 hidden aspect-square h-full w-full flex-col justify-center bg-black/80 px-5 text-white opacity-0 backdrop-blur-md transition-opacity duration-300 hover:opacity-100 md:absolute md:flex"
                 >
                   <h3 className="mx-auto px-3 py-6 text-5xl font-bold">
                     {image.title}
                   </h3>
                   <p className="text-lg font-extralight">{image.text}</p>
-                </a>
+                </Link>
                 <Link
                   to={image.link}
                   className="absolute bottom-0 left-0 flex h-1/3 w-full items-center justify-center bg-black/70 text-xl text-white backdrop-blur-md md:hidden"
