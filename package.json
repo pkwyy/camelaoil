@@ -4,10 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "dev": "npm install && vite",
+    "build": "rm -rf dist && npm install && vite build",
+    "eslint:check": "eslint .",
+    "eslint:fix": "eslint --fix .",
+    "preview": "vite preview",
+    "prettier:check": "prettier \"./**/*.{js,jsx,css}\" --check",
+    "prettier:fix": "prettier \"./**/*.{js,jsx,css}\" --write"
   },
   "dependencies": {
     "clsx": "2.1.1",
