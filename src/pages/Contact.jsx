@@ -1,49 +1,43 @@
-import banner1 from "../assets/images/banner1.jpg"
-import { miniBanners } from "./Home"
-import { motion } from "motion/react"
-import useInView from "../hooks/useInView"
-import { containerVariants, itemVariants } from "../utils/variants"
-import { ImEnvelop, ImMobile } from "react-icons/im"
+import banner1 from '../assets/images/banner1.jpg';
+import { miniBanners } from './Home';
+import { motion } from 'motion/react';
+import useInView from '../hooks/useInView';
+import { containerVariants, itemVariants } from '../utils/variants';
+import { ImEnvelop, ImMobile } from 'react-icons/im';
 
 const Contact = () => {
-  const [setRef, inView] = useInView({ threshold: 0.1 })
-  const [setRef1, inView1] = useInView({ threshold: 0.1 })
-  const [setRef2, inView2] = useInView({ threshold: 0.1 })
+  const [setRef, inView] = useInView({ threshold: 0.1 });
+  const [setRef1, inView1] = useInView({ threshold: 0.1 });
+  const [setRef2, inView2] = useInView({ threshold: 0.1 });
 
   return (
     <div className="max-w-screen relative overflow-x-hidden">
       <div className="relative w-full">
         <img src={banner1} className={miniBanners} />
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(to right, rgba(54, 85, 55, 0.1), rgba(0, 0, 0, 1))",
-          }}
-        ></div>
       </div>
 
       <motion.div
         initial="hidden"
-        animate={inView ? "visible" : "hidden"}
+        animate={inView ? 'visible' : 'hidden'}
         variants={containerVariants}
-        className="py-10"
         ref={setRef}
       >
+        <motion.div
+          variants={itemVariants}
+          className="px-4 py-10 sm:px-8 md:px-20 lg:px-80"
+        >
+          <p className="text-3xl">At Camela, we do not work alone;</p>
+          <p>
+            every point of contact between us and our customers is essential.
+            Contact us to make an inquiry, order our products or tells us how we
+            are doing, we can&apos;t wait to hear from you.
+          </p>
+        </motion.div>
         <motion.div
           variants={itemVariants}
           className="flex flex-col items-center justify-center"
         >
           <div className="flex flex-col gap-10 text-center md:px-10 lg:px-56 xl:px-96">
-            <motion.p
-              variants={itemVariants}
-              className="px-10 md:px-20 xl:px-32"
-            >
-              At Camela, we do not work alone; every point of contact between us
-              and our customers is essential. Contact us to make an inquiry,
-              order our products or tells us how we are doing, we can&apos;t
-              wait to hear from you.
-            </motion.p>
             <motion.div
               variants={itemVariants}
               className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-10 md:gap-40"
@@ -51,7 +45,7 @@ const Contact = () => {
               <div className="flex items-center gap-1">
                 <ImMobile className="size-10 md:size-14" />
                 <div>
-                  <p href="tel:+2349034048342">09034048342</p>
+                  <a href="tel:+2349034048342">09034048342</a>
                 </div>
               </div>
               <motion.div
@@ -59,7 +53,7 @@ const Contact = () => {
                 className="flex items-center gap-1"
               >
                 <ImEnvelop className="size-10 md:size-14" />
-                contact@camelaoil.ng
+                <a href="mailto:contact@camelaoil.ng:">contact@camelaoil.ng</a>
               </motion.div>
             </motion.div>
           </div>
@@ -68,7 +62,7 @@ const Contact = () => {
 
       <motion.div
         initial="hidden"
-        animate={inView1 ? "visible" : "hidden"}
+        animate={inView1 ? 'visible' : 'hidden'}
         variants={containerVariants}
         ref={setRef1}
         className="my-10"
@@ -98,7 +92,7 @@ const Contact = () => {
             placeholder="Message"
             className="w-full rounded-sm border border-black p-4"
           />
-          <button className="w-full bg-black text-white p-4 text-desertStorm">
+          <button className="text-desertStorm w-full bg-black p-4 text-white">
             Send Message
           </button>
         </motion.div>
@@ -106,7 +100,7 @@ const Contact = () => {
 
       <motion.div
         initial="hidden"
-        animate={inView2 ? "visible" : "hidden"}
+        animate={inView2 ? 'visible' : 'hidden'}
         variants={containerVariants}
         ref={setRef2}
         className="w-full"
@@ -123,7 +117,7 @@ const Contact = () => {
         ></motion.iframe>
       </motion.div>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

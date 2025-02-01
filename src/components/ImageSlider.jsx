@@ -123,7 +123,7 @@ const ImageSlider = () => {
       variants={containerVariants}
       ref={setRef1}
     >
-      <div className="flex w-fit flex-col p-5">
+      <div className="flex w-fit items-baseline gap-5 p-5">
         <h2 className="text-4xl font-semibold">Our Products</h2>
         <Link
           to="/products"
@@ -133,7 +133,7 @@ const ImageSlider = () => {
         </Link>
       </div>
       <div className="relative overflow-hidden">
-        <div className="top left absolute flex h-full w-full justify-between">
+        <div className="absolute flex h-full w-full justify-between">
           <button
             onClick={movePrev}
             className="z-10 m-0 h-full w-10 bg-black p-0 text-center text-white opacity-75 backdrop-blur-md transition-all duration-300 ease-in-out hover:bg-carrotOrange hover:opacity-100 disabled:cursor-not-allowed disabled:opacity-25"
@@ -180,7 +180,7 @@ const ImageSlider = () => {
         <motion.div
           variants={itemVariants}
           ref={carousel}
-          className="carousel-container no-scrollbar relative z-0 flex h-48 gap-3 overflow-x-scroll scroll-smooth md:h-96"
+          className="carousel-container no-scrollbar relative z-0 flex h-48 overflow-x-scroll scroll-smooth md:h-96 md:gap-3"
           onMouseDown={handleMouseDown}
           onMouseLeave={handleMouseLeave}
           onMouseUp={handleMouseUp}
@@ -196,7 +196,7 @@ const ImageSlider = () => {
                   href={image.link}
                   className="z-0 block aspect-square h-full w-80 bg-cover bg-left-top bg-no-repeat bg-origin-padding md:w-[420px]"
                   style={{ backgroundImage: `url(${image.image || ''})` }}
-                ></a>
+                />
                 <Link
                   to={image.link}
                   className="left-0 top-0 z-10 hidden aspect-square h-full w-full flex-col justify-center bg-black/80 px-5 text-white opacity-0 backdrop-blur-md transition-opacity duration-300 hover:opacity-100 md:absolute md:flex"
@@ -208,7 +208,7 @@ const ImageSlider = () => {
                 </Link>
                 <Link
                   to={image.link}
-                  className="absolute bottom-0 left-0 flex h-1/3 w-full items-center justify-center bg-black/70 text-xl text-white backdrop-blur-md md:hidden"
+                  className="absolute bottom-0 left-0 flex h-[5dvh] w-full items-center justify-center bg-black/70 text-sm text-white backdrop-blur-md md:hidden"
                 >
                   {image.title}
                 </Link>

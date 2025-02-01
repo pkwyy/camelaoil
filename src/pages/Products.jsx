@@ -24,15 +24,8 @@ const Products = () => {
     <div className="max-w-screen relative overflow-x-hidden">
       <div className="relative w-full">
         <img src={banner2} className={miniBanners} />
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              'linear-gradient(to right, rgba(54, 85, 55, 0.1), rgba(0, 0, 0, 1))',
-          }}
-        ></div>
       </div>
-      <div className="my-10">
+      <div className="md:my-10">
         <motion.div
           initial="hidden"
           animate={inView1 ? 'visible' : 'hidden'}
@@ -43,10 +36,9 @@ const Products = () => {
             variants={itemVariants}
             className="px-4 py-10 sm:px-8 md:px-20 lg:px-80"
           >
-            <h1 className="text-balance text-3xl">
+            <p className="text-balance text-3xl">
               What we offer: At Camela, we do more than produce vegetable oil
-            </h1>
-            <br />
+            </p>
             <p>
               We offer{' '}
               <span className="font-semibold">100% Organic vegetable oil</span>{' '}
@@ -67,7 +59,7 @@ const Products = () => {
             animate={inView2 ? 'visible' : 'hidden'}
             variants={containerVariants}
             ref={setRef2}
-            className="flex flex-col gap-20 px-4 sm:px-8"
+            className="flex flex-col gap-20 px-4 pb-10 sm:px-8"
           >
             <motion.div
               id="palm-oil"

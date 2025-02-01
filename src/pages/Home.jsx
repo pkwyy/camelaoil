@@ -79,7 +79,7 @@ const Home = () => {
           className="flex flex-col gap-10 py-10 md:text-lg"
           ref={setRef2}
         >
-          <div className="relative">
+          <motion.div variants={itemVariants} className="relative">
             <img src={banner} className={miniBanners} />
             <div className={opaqueOverlay}>
               <p className={opaqueOverlayText}>
@@ -87,7 +87,7 @@ const Home = () => {
                 flavor...
               </p>
             </div>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
       <ImageSlider />

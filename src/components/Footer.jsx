@@ -1,20 +1,20 @@
-import { FaFacebook } from "react-icons/fa"
-import NAFDACLogo from "../assets/images/NAFDACLogo.jpg"
-import SONLogo from "../assets/images/SONLogo.png"
-import { motion } from "motion/react"
-import useInView from "../hooks/useInView"
-import { containerVariants, itemVariants } from "../utils/variants"
+import { FaFacebook } from 'react-icons/fa';
+import NAFDACLogo from '../assets/images/NAFDACLogo.jpg';
+import SONLogo from '../assets/images/SONLogo.png';
+import { motion } from 'motion/react';
+import useInView from '../hooks/useInView';
+import { containerVariants, itemVariants } from '../utils/variants';
 
 const Footer = () => {
   const footerIconStyles =
-    "text-black size-5 hover:border-carrotOrange hover:text-carrotOrange hover:scale-125 ease-in-out duration-300 cursor-pointer"
-  const [setRef1, inView1] = useInView({ threshold: 0.1 })
+    'text-black size-5 hover:border-carrotOrange hover:text-carrotOrange hover:scale-125 ease-in-out duration-300 cursor-pointer';
+  const [setRef1, inView1] = useInView({ threshold: 0.1 });
 
   return (
-    <div className="pt-10 font-afacadFlux shadow-top">
+    <div className="py-5 font-afacadFlux shadow-top">
       <motion.div
         initial="hidden"
-        animate={inView1 ? "visible" : "hidden"}
+        animate={inView1 ? 'visible' : 'hidden'}
         variants={containerVariants}
         ref={setRef1}
         className="flex flex-col items-center gap-y-2"
@@ -23,8 +23,10 @@ const Footer = () => {
           variants={itemVariants}
           className="flex flex-col items-center py-3"
         >
-          <h1 className="text-xl font-bold">Certified by:</h1>
-          <div className="flex items-center justify-center">
+          <h1 className="font-crimsonText text-xl font-semibold italic">
+            Certified by:
+          </h1>
+          <div className="flex items-center justify-center gap-5">
             <img src={NAFDACLogo} height={100} width={100} />
             <img src={SONLogo} height={100} width={100} />
           </div>
@@ -43,15 +45,17 @@ const Footer = () => {
             variants={itemVariants}
             className="flex items-center space-x-1"
           >
-            <span className="font-crimsonText text-xl font-semibold">
+            <span className="font-crimsonText text-sm font-semibold">
               Camela Oil
             </span>
-            <span className="">Copyright ©{new Date().getFullYear()}</span>
+            <span className="text-xs">
+              Copyright ©{new Date().getFullYear()}
+            </span>
           </motion.div>
         </div>
       </motion.div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
