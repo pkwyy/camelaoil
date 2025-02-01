@@ -26,11 +26,13 @@ const Contact = () => {
           variants={itemVariants}
           className="px-4 py-10 sm:px-8 md:px-20 lg:px-80"
         >
-          <p className="text-3xl">At Camela, we do not work alone;</p>
           <p>
-            every point of contact between us and our customers is essential.
-            Contact us to make an inquiry, order our products or tells us how we
-            are doing, we can&apos;t wait to hear from you.
+            <span className="text-3xl">At Camela, we do not work alone; </span>
+            <span className="text-base">
+              every point of contact between us and our customers is essential.
+              Contact us to make an inquiry, order our products or tells us how
+              we are doing, we can&apos;t wait to hear from you.
+            </span>
           </p>
         </motion.div>
         <motion.div
